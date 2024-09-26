@@ -38,12 +38,12 @@ function About1() {
                   </li>
                 </ul>
                 <Link href="/about">
-                  <a
+                  <div
                     style={{ cursor: "pointer" }}
                     className="eg-btn btn--primary btn--lg"
                   >
                     KNOW MORE
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

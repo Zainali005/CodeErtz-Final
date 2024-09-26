@@ -18,7 +18,7 @@ function BlogRecentPostWidget() {
                         window.scrollTo({ top: 0, behavior: "smooth" })
                       }
                     >
-                      <a className="recent-post-item">
+                      <div className="recent-post-item">
                         <div className="recent-post-img">
                           <img src={list.image} alt="image" />
                         </div>
@@ -32,7 +32,7 @@ function BlogRecentPostWidget() {
                             <p>{list.date}</p>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     </Link>
                   </li>
                 );

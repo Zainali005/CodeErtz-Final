@@ -12,7 +12,7 @@ function Banner4() {
         <img src="assets/images/bg/banner4-wave2.svg" className="banner4-wave2 img-fluid" alt="image" />
         <img src="assets/images/bg/banner4-spring.svg" className="banner4-spring img-fluid" alt="image" />
         <img src="assets/images/bg/banner4-dot-square.svg" className="banner4-dot-sq img-fluid" alt="image" />
-        <a href="#about" className="go-down-btn"></a>
+        <Link href="#about" className="go-down-btn"></Link>
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-lg-7">
@@ -23,7 +23,7 @@ function Banner4() {
                   tristi que, vulputate ante quis, tempus enim. Proin quis euismod purus. Suspen disse
                   efficitur <br /> aliquam enim sed consequat vulputate ante quis.</p>
                 <div className="button-group gap-5">
-                  <Link href="/project" ><a className="eg-btn btn--primary4 btn--lg" style={{ cursor: "pointer" }}>Discover More</a></Link>
+                  <Link href="/project" ><div className="eg-btn btn--primary4 btn--lg" style={{ cursor: "pointer" }}>Discover More</div></Link>
                   <div className="btn-with-vdo d-flex align-items-center gap-4"  onClick={() => setOpen(true)} style={{ cursor: "pointer" }}>
                     <div className="video-play">
                       <div  className="popup-youtube video-icon style-2" ><i className="bx bx-play" /></div>

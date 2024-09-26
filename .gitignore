@@ -4,6 +4,12 @@
 # Next.js build output
 /.next/
 
+yarn.lock
+
+package-lock.json
+
+
+
 # Environment variables file
 .env
 

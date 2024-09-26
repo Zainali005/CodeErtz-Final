@@ -9,31 +9,31 @@ function Banner1() {
       <div className="banner-section1">
         <ul className="banner-social gap-5">
           <li>
-            <a
+            <div
               href="https://www.twitter.com/codeertz"
               target="_blank"
               rel="noopener noreferrer"
             >
               Twitter
-            </a>
+            </div>
           </li>
           <li>
-            <a
+            <div
               href="https://www.facebook.com/codeertz"
               target="_blank"
               rel="noopener noreferrer"
             >
               Facebook
-            </a>
+            </div>
           </li>
           <li>
-            <a
+            <div
               href="https://www.instagram.com/codeertz"
               target="_blank"
               rel="noopener noreferrer"
             >
               Instagram
-            </a>
+            </div>
           </li>
         </ul>
         <img
@@ -78,7 +78,7 @@ function Banner1() {
 
                 <div className="button-group gap-5">
                   <Link href="/project">
-                    <a className="eg-btn btn--primary btn--lg">Discover More</a>
+                    <div className="eg-btn btn--primary btn--lg">Discover More</div>
                   </Link>
                   {/* <div
                     onClick={() => setOpen(true)}

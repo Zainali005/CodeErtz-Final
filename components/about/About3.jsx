@@ -65,12 +65,12 @@ function About3() {
                 </ul>
                 <div className="about-footer d-flex jusify-content-start align-items-center flex-wrap gap-4">
                   <Link href="/about">
-                    <a
+                    <div
                       style={{ cursor: "pointer" }}
                       className="eg-btn btn--primary3 btn--lg"
                     >
                       KNOW MORE
-                    </a>
+                    </div>
                   </Link>
                   <div className="experience d-flex flex-row align-items-center">
                     <svg

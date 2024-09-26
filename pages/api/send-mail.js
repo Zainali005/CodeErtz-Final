@@ -1,26 +1,65 @@
 import nodemailer from "nodemailer";
 import { IncomingForm } from "formidable";
+import fs from "fs";
+import path from "path";
 
 export const config = {
   api: {
     bodyParser: false,
+    maxFileSize: 10 * 1024 * 1024,
   },
 };
 
 const handler = async (req, res) => {
+  // console.log("Received request:", req.method);
   if (req.method === "POST") {
-    const form = new IncomingForm();
+    // console.log("Start processing request...");
+    // console.log("Request Headers:", req.headers);
+    const uploadDir = path.join(process.cwd(), "uploads");
+
+    // Ensure the upload directory exists
+    if (!fs.existsSync(uploadDir)) {
+      fs.mkdirSync(uploadDir, { recursive: true });
+    }
+    // console.log("Received request:", req.method);
+    const form = new IncomingForm({
+      uploadDir: uploadDir,
+      keepExtensions: true,
+      maxFileSize: 10 * 1024 * 1024,
+      multiples: false,
+    });
 
     form.parse(req, async (err, fields, files) => {
       if (err) {
-        console.error("Form parsing error:", err);
+        console.error("Form parsing error:", err.message);
         return res.status(500).json({ error: "Form parsing error" });
       }
+      // console.log("Form parsed successfully.");
 
-      const { name, phone, email, position, experience, coverLetter } = fields;
-      const resumeFile = files.resume;
-      if (!name || !email) {
-        return res.status(400).json({ error: "Name and Email are required" });
+      console.log("Fields:", fields);
+      // console.log("Files:", files);
+
+      const resumeFile = Array.isArray(files.resume)
+        ? files.resume[0]
+        : files.resume;
+
+      if (!resumeFile || !resumeFile.filepath) {
+        return res.status(400).json({ error: "Resume file is required" });
+      }
+
+      // console.log("Resume File:", resumeFile);
+      // console.log("Resume File Path:", resumeFile.filepath);
+
+      // Check the correct path to read the file content
+      let resumeContent;
+      try {
+        resumeContent = fs.readFileSync(resumeFile.filepath);
+      } catch (readError) {
+        console.error("Error reading resume file:", readError);
+        return res.status(500).json({
+          error: "Error reading resume file",
+          details: readError.message,
+        });
       }
 
       const transporter = nodemailer.createTransport({
@@ -31,17 +70,20 @@ const handler = async (req, res) => {
         },
       });
 
-      const adminEmail = "zainali5002@gmail.com";
+      const adminEmail = "usamaaamirsohail@gmail.com";
+
+      // Extract fields from the parsed form
+      const { name, phone, position, experience, coverletter, email } = fields;
 
       const adminMailOptions = {
         from: process.env.EMAIL_USER,
         to: adminEmail,
         subject: "New Job Application",
-        text: `You have received a new job application from ${name}.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nPosition: ${position}\nExperience: ${experience}\nCover Letter: ${coverLetter}\nEmail: ${email}`,
+        text: `You have received a new job application from ${name}.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nPosition: ${position}\nExperience: ${experience}\nCover Letter: ${coverletter}\nEmail: ${email}`,
         attachments: [
           {
             filename: resumeFile.originalFilename,
-            path: resumeFile.filepath,
+            content: resumeContent,
           },
         ],
       };
@@ -55,10 +97,12 @@ const handler = async (req, res) => {
 
       try {
         await transporter.sendMail(adminMailOptions);
+        console.log("Admin email sent successfully!");
         await transporter.sendMail(userMailOptions);
+        console.log("User email sent successfully!");
         return res.status(200).json({ message: "Emails sent successfully!" });
-      } catch (error) {
-        console.error("Error sending email:", error);
+      } catch (emailError) {
+        console.error("Error sending email:", emailError.message);
         return res.status(500).json({ error: "Failed to send emails" });
       }
     });

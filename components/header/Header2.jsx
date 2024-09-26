@@ -88,11 +88,11 @@ function Header2() {
         <div className="menu-toggle-wrap bg-white">
           <div className="sidebar-top-area d-flex justify-content-between align-items-center">
             <div className="sidebar-logo px-4 py-3 rounded">
-              <Link href="#">
-                <a>
+              <Link href="#" legacyBehavior>
+                <div>
                   {" "}
                   <img src="/assets/images/icons/sidebar-logo.svg" alt="image" />
-                </a>
+                </div>
               </Link>
             </div>
             <div className="cross-icon" onClick={showSidebarMenu}>
@@ -137,22 +137,22 @@ function Header2() {
                 <div className="blog-widget-body">
                   <ul className="follow-list d-flex flex-row align-items-start gap-4">
                     <li>
-                      <a href="https://www.facebook.com/">
+                      <a legacyBehaviorhref="https://www.facebook.com/">
                         <i className="bx bxl-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.twitter.com/">
+                      <a legacyBehaviorhref="https://www.twitter.com/">
                         <i className="bx bxl-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/">
+                      <a legacyBehaviorhref="https://www.instagram.com/">
                         <i className="bx bxl-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.pinterest.com/">
+                      <a legacyBehaviorhref="https://www.pinterest.com/">
                         <i className="bx bxl-pinterest" />
                       </a>
                     </li>
@@ -190,9 +190,9 @@ function Header2() {
       <header className="header-area style-2">
         <div className="header-logo">
           <Link href="/">
-            <a>
+            <div>
               <img alt="image" src="/assets/images/icons/header1-logo.svg" />
-            </a>
+            </div>
           </Link>
         </div>
         <div
@@ -201,9 +201,9 @@ function Header2() {
           <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
             <div className="mobile-logo-wrap ">
               <Link href="/">
-                <a>
+                <div>
                   <img alt="image"   style={{ width: '200px', height: 'auto' }} src="/assets/images/icons/footer2-logo.svg" />
-                </a>
+                </div>
               </Link>
             </div>
             <div onClick={handleMobileMenu} className="menu-close-btn">
@@ -222,7 +222,7 @@ function Header2() {
               onClick={() => dispatch({ type: "homeOne" })}
             >
               <Link href="#" className="drop-down">
-                <a>Home</a>
+                Home
               </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
@@ -234,27 +234,27 @@ function Header2() {
               >
                 <li>
                   <Link href="/">
-                    <a>Home 1</a>
+                    Home 1
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <a>Home 2</a>
+                    Home 2
                   </Link>
                 </li>
                 <li>
                   <Link href="/index3">
-                    <a>Home 3</a>
+                    Home 3
                   </Link>
                 </li>
                 <li>
                   <Link href="/index4">
-                    <a>Home 4</a>
+                    Home 4
                   </Link>
                 </li>
                 <li>
                   <Link href="/index5">
-                    <a>Home 5</a>
+                    Home 5
                   </Link>
                 </li>
               </ul>
@@ -264,7 +264,7 @@ function Header2() {
               onClick={() => dispatch({ type: "pages" })}
             >
               <Link href="#">
-                <a className="drop-down">Pages</a>
+                <a legacyBehaviorclassName="drop-down">Pages</a>
               </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
@@ -276,27 +276,27 @@ function Header2() {
               >
                 <li>
                   <Link href="/about">
-                    <a>About</a>
+                    About
                   </Link>
                 </li>
                 <li>
                   <Link href="/team">
-                    <a>Team</a>
+                    Team
                   </Link>
                 </li>
                 <li>
                   <Link href="/faq">
-                    <a>Faq</a>
+                    Faq
                   </Link>
                 </li>
                 <li>
                   <Link href="job-list">
-                    <a>Job List</a>
+                    Job List
                   </Link>
                 </li>
                 <li>
                   <Link href="/job-details">
-                    <a>Career</a>
+                    Career
                   </Link>
                 </li>
                 <li onClick={handleMobileSubMenu}>
@@ -311,22 +311,22 @@ function Header2() {
                   >
                     <li>
                       <Link href="#">
-                        <a>Child 1</a>
+                        Child 1
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <a>Child 2</a>
+                        Child 2
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <a>Child 3</a>
+                        Child 3
                       </Link>
                     </li>
                     <li>
                       <Link href="#">
-                        <a>Child 4</a>
+                        Child 4
                       </Link>
                     </li>
                   </ul>
@@ -338,7 +338,7 @@ function Header2() {
               onClick={() => dispatch({ type: "service" })}
             >
               <Link href="#">
-                <a className="drop-down">Services</a>
+                <a legacyBehaviorclassName="drop-down">Services</a>
               </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
@@ -363,7 +363,7 @@ function Header2() {
               onClick={() => dispatch({ type: "project" })}
             >
               <Link href="#">
-                <a className="drop-down">Projects</a>
+                <a legacyBehaviorclassName="drop-down">Projects</a>
               </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
@@ -375,12 +375,12 @@ function Header2() {
               >
                 <li>
                   <Link href="/project">
-                    <a>Projects</a>
+                    Projects
                   </Link>
                 </li>
                 <li>
                   <Link href="/project-details">
-                    <a>Projects Details</a>
+                    Projects Details
                   </Link>
                 </li>
               </ul>
@@ -390,7 +390,7 @@ function Header2() {
               onClick={() => dispatch({ type: "blog" })}
             >
               <Link href="#">
-                <a className="drop-down">Blog</a>
+                <a legacyBehaviorclassName="drop-down">Blog</a>
               </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
@@ -402,24 +402,24 @@ function Header2() {
               >
                 <li>
                   <Link href="/blog-grid">
-                    <a>Blog Grid</a>
+                    Blog Grid
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog-standard">
-                    <a>Blog Standard</a>
+                    Blog Standard
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog-details">
-                    <a>Blog Details</a>
+                    Blog Details
                   </Link>
                 </li>
               </ul>
             </li>
             <li>
               <Link href="/contact">
-                <a>Contact Us</a>
+                Contact Us
               </Link>
             </li>
           </ul>
@@ -479,7 +479,7 @@ function Header2() {
             <div className="hotline-info">
               <span>Messge Us</span>
               <h6>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <a legacyBehaviorhref="mailto:info@example.com">info@example.com</a>
               </h6>
             </div>
           </div>

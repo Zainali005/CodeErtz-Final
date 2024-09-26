@@ -38,12 +38,12 @@ function OfferSection() {
                   industrys standard dummy text ever.
                 </p>
                 <Link href="/service-details">
-                  <a
+                  <div
                     className="eg-btn btn--primary3 btn--lg"
                     style={{ cursor: "pointer" }}
                   >
                     Get Started
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

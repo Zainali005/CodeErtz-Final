@@ -11,7 +11,7 @@ function Faq4() {
       <div className="col-lg-4">
         <div className="sidebar-card wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
           <h2>Discover Frequently Asked Questions?</h2>
-          <Link href="/contact" className="eg-btn btn--primary4 btn--lg"><a className="eg-btn btn--primary4 btn--lg">Work Together</a></Link>
+          <Link href="/contact" className="eg-btn btn--primary4 btn--lg"><div className="eg-btn btn--primary4 btn--lg">Work Together</div></Link>
         </div>
       </div>
       <div className="col-lg-8">

@@ -31,12 +31,12 @@ function Feature5() {
                   </li>
                 </ul>
                 <Link href="/service-details">
-                  <a
+                  <div
                     className="eg-btn btn--primary5 capsule btn--md"
                     style={{ cursor: "pointer" }}
                   >
                     Get Started
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

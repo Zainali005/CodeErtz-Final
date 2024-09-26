@@ -19,32 +19,77 @@ function JobDetails() {
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     if (type === "file") {
+      console.log("Selected file:", files[0]);
       setResume(files[0]);
     } else {
       setFormData({ ...formData, [name]: value });
     }
   };
 
+  const validateForm = () => {
+    const { phone, email, coverLetter } = formData;
+
+    // Validate phone number (only digits)
+    const phoneRegex = /^[0-9]+$/;
+    if (!phoneRegex.test(phone)) {
+      toast.error("Phone number must contain only digits.");
+      return false;
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return false;
+    }
+
+    // Validate cover letter length (max 500 characters)
+    if (coverLetter.length > 500) {
+      toast.error("Cover letter must not exceed 500 characters.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = new FormData();
 
+    // Validate the form
+    if (!validateForm()) return;
+
+    const data = new FormData();
+  
+    // Append form fields
     Object.keys(formData).forEach((key) => {
       data.append(key, formData[key]);
     });
-
+  
+    // Append resume file
     if (resume) {
-      data.append("resume", resume);
+      data.append("resume", resume); // Append the resume file
+    } else {
+      console.error("No resume selected.");
+      return; // Prevent submission if no resume
     }
-
+  
+    // Debug FormData
+    for (let [key, value] of data.entries()) {
+      if (key === "resume") {
+        console.log("Resume file:", value);
+      } else {
+        console.log(`${key}: ${value}`);
+      }
+    }
+  
     setLoading(true);
-
+  
     try {
       const response = await fetch("/api/send-mail", {
         method: "POST",
         body: data,
       });
-
+  
       if (response.ok) {
         toast.success("Application submitted successfully!");
         setFormData({
@@ -57,7 +102,11 @@ function JobDetails() {
         });
         setResume(null);
       } else {
-        toast.error("Error submitting application. Please try again.");
+        const errorData = await response.json();
+        console.error("Error submitting form:", errorData);
+        toast.error(
+          errorData.error || "Error submitting application. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error:", error);
@@ -90,7 +139,7 @@ function JobDetails() {
                   <h4>Apply for a Position:</h4>
                   <p>Please complete the form below to share your details:</p>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
                   <div className="row g-4">
                     <div className="col-lg-6">
                       <div className="form-inner">
@@ -162,16 +211,16 @@ function JobDetails() {
                           onChange={handleChange}
                         />
                       </div>
-                      <div className="col-lg-12">
-                        <div className="form-inner">
-                          <input
-                            type="file"
-                            name="resume"
-                            accept=".pdf,.doc,.docx"
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="form-inner">
+                        <input
+                          type="file"
+                          name="resume"
+                          accept=".pdf,.xlsx,.xls" 
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                     </div>
                     <div className="col-lg-12 text-center">

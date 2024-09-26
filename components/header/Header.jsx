@@ -126,11 +126,13 @@ function Header() {
                     <span>Address:</span> Defence Avenue Mall, DHA 1 , Islamabad
                   </li>
                   <li>
-                    <a href="tel:+92149709315">+92314 9709315</a>
+                    <Link href="tel:+92149709315">+92314 9709315</Link>
                   </li>
                   <li>
                     <span>Email:</span>
-                    <a href="mailto:info@codeertz.com">info@codeertz.com</a>
+                    <Link href="mailto:info@codeertz.com">
+                      info@codeertz.com
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -143,24 +145,24 @@ function Header() {
                 <div className="blog-widget-body">
                   <ul className="follow-list d-flex flex-row align-items-start gap-4">
                     <li>
-                      <a href="https://www.facebook.com">
+                      <Link href="https://www.facebook.com">
                         <i className="bx bxl-facebook" />
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="https://www.twitter.com">
+                      <Link href="https://www.twitter.com">
                         <i className="bx bxl-twitter" />
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/">
+                      <Link href="https://www.instagram.com/">
                         <i className="bx bxl-instagram" />
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="https://www.pinterest.com">
+                      <Link href="https://www.pinterest.com">
                         <i className="bx bxl-pinterest" />
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -211,24 +213,22 @@ function Header() {
       >
         <div className="header-logo">
           <Link href="/ ">
-            <a>
-              <img
-                alt="image"
-                src={
-                  currentRoute === "/"
-                    ? "/assets/images/icons/header1-logo.svg"
-                    : currentRoute === "/index2"
-                    ? "/assets/images/icons/header2-logo.svg"
-                    : currentRoute === "/index3"
-                    ? "/assets/images/icons/header3-logo.svg"
-                    : currentRoute === "/index4"
-                    ? "/assets/images/icons/header4-logo.svg"
-                    : currentRoute === "/index5"
-                    ? "/assets/images/icons/header5-logo.svg"
-                    : "/assets/images/icons/header1-logo.svg"
-                }
-              />
-            </a>
+            <img
+              alt="image"
+              src={
+                currentRoute === "/"
+                  ? "/assets/images/icons/header1-logo.svg"
+                  : currentRoute === "/index2"
+                  ? "/assets/images/icons/header2-logo.svg"
+                  : currentRoute === "/index3"
+                  ? "/assets/images/icons/header3-logo.svg"
+                  : currentRoute === "/index4"
+                  ? "/assets/images/icons/header4-logo.svg"
+                  : currentRoute === "/index5"
+                  ? "/assets/images/icons/header5-logo.svg"
+                  : "/assets/images/icons/header1-logo.svg"
+              }
+            />
           </Link>
         </div>
         <div
@@ -291,7 +291,7 @@ function Header() {
               className="menu-item-has-children"
               onClick={() => dispatch({ type: "pages" })}
             >
-              <a
+              <Link
                 href="#"
                 className={
                   currentRoute === "/about" ||
@@ -303,7 +303,7 @@ function Header() {
                 }
               >
                 Pages
-              </a>
+              </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
                 className={
@@ -313,25 +313,17 @@ function Header() {
                 }
               >
                 <li>
-                  <Link href="/about">
-                    <a>About</a>
-                  </Link>
+                  <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/team">
-                    <a>Team</a>
-                  </Link>
+                  <Link href="/team">Team</Link>
                 </li>
                 <li></li>
                 <li>
-                  <Link href="/job-list">
-                    <a>Job List</a>
-                  </Link>
+                  <Link href="/job-list">Job List</Link>
                 </li>
                 <li>
-                  <Link href="/job-details">
-                    <a>Career</a>
-                  </Link>
+                  <Link href="/job-details">Career</Link>
                 </li>
               </ul>
             </li>
@@ -339,7 +331,7 @@ function Header() {
               className="menu-item-has-children"
               onClick={() => dispatch({ type: "service" })}
             >
-              <a
+              <Link
                 href="#"
                 className={
                   currentRoute === "/service-details" ||
@@ -349,7 +341,7 @@ function Header() {
                 }
               >
                 Services
-              </a>
+              </Link>
               <i className="bi bi-chevron-down dropdown-icon" />
               <ul
                 className={
@@ -360,18 +352,18 @@ function Header() {
               >
                 <li>
                   <Link href="/service ">
-                    <a
+                    <div
                       className={
                         currentRoute === "/service" ? "active" : "disable"
                       }
                     >
                       Services
-                    </a>
+                    </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="/service-details">
-                    <a
+                    <div
                       className={
                         currentRoute === "/service-details"
                           ? "active"
@@ -379,7 +371,7 @@ function Header() {
                       }
                     >
                       Services Details
-                    </a>
+                    </div>
                   </Link>
                 </li>
               </ul>
@@ -402,11 +394,11 @@ function Header() {
 
             <li>
               <Link href="/contact">
-                <a
+                <div
                   className={currentRoute === "/contact" ? "active" : "disable"}
                 >
                   Contact Us
-                </a>
+                </div>
               </Link>
             </li>
           </ul>
@@ -578,16 +570,16 @@ function Header() {
               </div>
               <ul className="header-social d-xxl-flex d-none justify-content-center align-items-center flex-row gap-3">
                 <li>
-                  <a href="https://www.instagram.com">IN</a>
+                  <Link href="https://www.instagram.com">IN</Link>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com">FB</a>
+                  <Link href="https://www.facebook.com">FB</Link>
                 </li>
                 <li>
-                  <a href="https://www.twitter.com">TW</a>
+                  <Link href="https://www.twitter.com">TW</Link>
                 </li>
                 <li>
-                  <a href="https://www.pinterest.com">PR</a>
+                  <Link href="https://www.pinterest.com">PR</Link>
                 </li>
               </ul>
               <div className="header-icons d-flex align-items-center">

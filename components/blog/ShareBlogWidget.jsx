@@ -10,24 +10,24 @@ function ShareBlogWidget() {
           <div className="blog-widget-body">
             <ul className="follow-list d-flex flex-row align-items-start gap-4">
               <li>
-                <a href="https://www.facebook.com/">
+                <Link  href="https://www.facebook.com/">
                   <i className="bx bxl-facebook" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.twitter.com/">
+                <Link  href="https://www.twitter.com/">
                   <i className="bx bxl-twitter" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <Link  href="https://www.instagram.com/">
                   <i className="bx bxl-instagram" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.pinterest.com/">
+                <Link  href="https://www.pinterest.com/">
                   <i className="bx bxl-pinterest" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

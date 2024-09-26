@@ -9,31 +9,31 @@ function BlogPostTagWidget() {
           <div className="blog-widget-body">
             <ul className="tag-list d-flex justify-content-start flex-wrap gap-4">
               <li>
-                <a href="#">Advertising</a>
+                <Link href="#">Advertising</Link>
               </li>
               <li>
-                <a href="#">Website UI</a>
+                <Link href="#">Website UI</Link>
               </li>
               <li>
-                <a href="#">Agency</a>
+                <Link href="#">Agency</Link>
               </li>
               <li>
-                <a href="#">Advertising</a>
+                <Link href="#">Advertising</Link>
               </li>
               <li>
-                <a href="#">ui/Ux </a>
+                <Link href="#">ui/Ux </Link>
               </li>
               <li>
-                <a href="#">Website UI</a>
+                <Link href="#">Website UI</Link>
               </li>
               <li>
-                <a href="#">branding</a>
+                <Link href="#">branding</Link>
               </li>
               <li>
-                <a href="#">agency branding</a>
+                <Link href="#">agency branding</Link>
               </li>
               <li>
-                <a href="#">Website UI</a>
+                <Link href="#">Website UI</Link>
               </li>
             </ul>
           </div>

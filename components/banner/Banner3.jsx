@@ -51,13 +51,13 @@ function Banner3() {
         />
         <ul className="banner-social3 gap-5">
           <li>
-            <a href="https://www.twitter.com/">Twitter</a>
+            <Link href="https://www.twitter.com/">Twitter</Link>
           </li>
           <li>
-            <a href="https://www.facebook.com/">Facebook</a>
+            <Link href="https://www.facebook.com/">Facebook</Link>
           </li>
           <li>
-            <a href="https://www.instagram.com/">Instagram</a>
+            <Link href="https://www.instagram.com/">Instagram</Link>
           </li>
         </ul>
         <Swiper {...banner3Slide} className="swiper banner3">
@@ -77,14 +77,14 @@ function Banner3() {
                         </p>
                         <div className="button-group d-flex justify-content-lg-start justify-content-center align-items-center flex-wrap gap-4">
                           <Link href="/about">
-                            <a className="eg-btn btn--primary3 btn--lg">
+                            <div className="eg-btn btn--primary3 btn--lg">
                               LEARN MORE
-                            </a>
+                            </div>
                           </Link>
                           <Link href="/contact">
-                            <a className="eg-btn btn--transparent btn--lg">
+                            <div className="eg-btn btn--transparent btn--lg">
                               GET IN TOUCH
-                            </a>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -108,14 +108,14 @@ function Banner3() {
                         </p>
                         <div className="button-group d-flex justify-content-lg-start justify-content-center align-items-center flex-wrap gap-4">
                           <Link href="/about">
-                            <a className="eg-btn btn--primary3 btn--lg">
+                            <div className="eg-btn btn--primary3 btn--lg">
                               LEARN MORE
-                            </a>
+                            </div>
                           </Link>
                           <Link href="/contact">
-                            <a className="eg-btn btn--transparent btn--lg">
+                            <div className="eg-btn btn--transparent btn--lg">
                               GET IN TOUCH
-                            </a>
+                            </div>
                           </Link>
                         </div>
                       </div>

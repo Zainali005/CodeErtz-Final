@@ -21,9 +21,9 @@ function Error() {
                     name changed <br /> or is temporarily unavailable.
                   </p>
                   <Link href="/">
-                    <a className="eg-btn btn--primary btn--lg mt-4">
+                    <div className="eg-btn btn--primary btn--lg mt-4">
                       Back to Home
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

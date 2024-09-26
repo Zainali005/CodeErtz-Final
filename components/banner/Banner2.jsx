@@ -62,13 +62,13 @@ function Banner2() {
         />
         <ul className="banner-social2 gap-5">
           <li>
-            <a href="https://www.twitter.com/">Twitter</a>
+            <Link href="https://www.twitter.com/">Twitter</Link>
           </li>
           <li>
-            <a href="https://www.facebook.com/">Facebook</a>
+            <Link href="https://www.facebook.com/">Facebook</Link>
           </li>
           <li>
-            <a href="https://www.instagram.com/">Instagram</a>
+            <Link href="https://www.instagram.com/">Instagram</Link>
           </li>
         </ul>
         <Swiper {...banner2Slide} className="swiper banner2">
@@ -87,9 +87,9 @@ function Banner2() {
                           UI/UX experiences.
                         </p>
                         <Link href="/project">
-                          <a className="eg-btn btn--primary2 btn--lg">
+                          <div className="eg-btn btn--primary2 btn--lg">
                             Discover More
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>
@@ -111,9 +111,9 @@ function Banner2() {
                           ultrices dui et, aliquam urna.
                         </p>
                         <Link href="/project">
-                          <a className="eg-btn btn--primary2 btn--lg">
+                          <div className="eg-btn btn--primary2 btn--lg">
                             Start Exploring
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>

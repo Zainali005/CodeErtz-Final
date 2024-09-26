@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function BlogSingleCard1({
@@ -22,7 +23,7 @@ function BlogSingleCard1({
         <div className="blog-content hover-border1">
           <span>{category}</span>
           <h4>
-            <a href="blog-details">{title}</a>
+            <Link href="blog-details">{title}</Link>
           </h4>
           <div className="blog-meta">
             <div className="author-img">

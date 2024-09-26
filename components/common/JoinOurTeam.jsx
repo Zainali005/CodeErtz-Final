@@ -17,12 +17,12 @@ function JoinOurTeam({ btnclass }) {
               </div>
               <div className="col-lg-5 d-flex justify-content-lg-end justify-content-center">
                 <Link href="/contact">
-                  <a
+                  <div
                     className={`${"eg-btn capsule joinus-btn"} ${btnclass}`}
                     style={{ cursor: "pointer" }}
                   >
                     Join Us
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

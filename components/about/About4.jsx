@@ -21,7 +21,7 @@ function About4() {
             <li>You will get 100% money back offer.</li>
           </ul>
           <div className="about-footer d-flex jusify-content-start align-items-center flex-wrap gap-4">
-            <Link href="/about" ><a className="eg-btn btn--primary4 btn--lg" style={{ cursor: "pointer" }}>KNOW MORE</a></Link>
+            <Link href="/about" ><div className="eg-btn btn--primary4 btn--lg" style={{ cursor: "pointer" }}>KNOW MORE</div></Link>
             <div className="experience d-flex flex-row align-items-center">
               <svg width={44} height={44} viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_445_100)">

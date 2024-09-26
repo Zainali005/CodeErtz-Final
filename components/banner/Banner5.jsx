@@ -6,24 +6,24 @@ function Banner5() {
       <div className="banner-section5">
         <ul className="banner-social style-2 gap-4">
           <li>
-            <a href="https://www.facebook.com/">
+            <Link href="https://www.facebook.com/">
               <i className="bx bxl-facebook" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.twitter.com/">
+            <Link href="https://www.twitter.com/">
               <i className="bx bxl-twitter" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.pinterest.com/">
+            <Link href="https://www.pinterest.com/">
               <i className="bx bxl-pinterest" />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="https://www.instagram.com/">
+            <Link href="https://www.instagram.com/">
               <i className="bx bxl-instagram" />
-            </a>
+            </Link>
           </li>
         </ul>
         <img
@@ -77,20 +77,20 @@ function Banner5() {
                 </p>
                 <div className="button-group gap-4">
                   <Link href="/about">
-                    <a
+                    <div
                       className="eg-btn btn--primary5 capsule btn--lg"
                       style={{ cursor: "pointer" }}
                     >
                       Learn More
-                    </a>
+                    </div>
                   </Link>
                   <Link href="/contact">
-                    <a
+                    <div
                       className="eg-btn btn--primary5 capsule btn--outline btn--lg"
                       style={{ cursor: "pointer" }}
                     >
                       Get In Touch
-                    </a>
+                    </div>
                   </Link>
                 </div>
               </div>

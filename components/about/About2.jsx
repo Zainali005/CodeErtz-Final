@@ -42,12 +42,12 @@ function About2() {
                 </ul>
                 <div className="about-footer d-flex jusify-content-start align-items-center flex-wrap gap-4">
                   <Link href="/about">
-                    <a
+                    <div
                       className="eg-btn btn--primary2 capsule btn--lg"
                       style={{ cursor: "pointer" }}
                     >
                       MORE ABOUT
-                    </a>
+                    </div>
                   </Link>
                   <div className="experience d-flex flex-row align-items-center">
                     <svg

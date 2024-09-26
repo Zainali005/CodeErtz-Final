@@ -2,6 +2,7 @@ import React from "react";
 import { sponsoreData } from "../../data/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import Link from "next/link";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 function OurPartner() {
   const partnerSlider = {
@@ -98,9 +99,9 @@ function OurPartner() {
                 {sponsoreData.map((item) => {
                   return (
                     <SwiperSlide key={item.id} className="swiper-slide">
-                      <a href="#" className="single-sponsor ">
+                      <Link href="#" className="single-sponsor ">
                         <img src={item.image} alt="image" />
-                      </a>
+                      </Link>
                     </SwiperSlide>
                   );
                 })}
