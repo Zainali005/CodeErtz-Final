@@ -137,22 +137,22 @@ function Header2() {
                 <div className="blog-widget-body">
                   <ul className="follow-list d-flex flex-row align-items-start gap-4">
                     <li>
-                      <a legacyBehaviorhref="https://www.facebook.com/">
+                      <a href="https://www.facebook.com/">
                         <i className="bx bxl-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a legacyBehaviorhref="https://www.twitter.com/">
+                      <a href="https://www.twitter.com/">
                         <i className="bx bxl-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a legacyBehaviorhref="https://www.instagram.com/">
+                      <a href="https://www.instagram.com/">
                         <i className="bx bxl-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a legacyBehaviorhref="https://www.pinterest.com/">
+                      <a href="https://www.pinterest.com/">
                         <i className="bx bxl-pinterest" />
                       </a>
                     </li>
@@ -479,7 +479,7 @@ function Header2() {
             <div className="hotline-info">
               <span>Messge Us</span>
               <h6>
-                <a legacyBehaviorhref="mailto:info@example.com">info@example.com</a>
+                <a href="mailto:info@example.com">info@example.com</a>
               </h6>
             </div>
           </div>

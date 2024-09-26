@@ -6,7 +6,7 @@ import path from "path";
 export const config = {
   api: {
     bodyParser: false,
-    maxFileSize: 10 * 1024 * 1024,
+    maxFileSize: 10485760,
   },
 };
 
