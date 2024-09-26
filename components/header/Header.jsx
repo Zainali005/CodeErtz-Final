@@ -379,6 +379,7 @@ function Header() {
             <li
               className="menu-item-has-children"
               onClick={() => dispatch({ type: "project" })}
+              
             >
               <Link
                 href="/project"
